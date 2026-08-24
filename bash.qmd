@@ -1,0 +1,168 @@
+---
+title: "Unix"
+author: "Kam"
+format: html
+editor: visual
+---
+
+## 
+
+```{bash}
+# you should be able to demosntrate proficiency in working with 
+cd
+pwd
+mkdir demo
+cd demo
+echo "hello" > test.txt
+cp -v test.txt test_new.txt
+mv test_new.txt renamed.txt
+ls -lh
+cat test.txt
+head -n 5 test.txt
+tail -n 5 test.txt
+rm -i renamed.txt
+
+```
+
+```         
+Very first thing in Unix is the environment 
+We need to get used to it 
+Please refer to this document for extensive tutorial from cypress 
+
+https://wiki.hpc.tulane.edu/trac/wiki/cypress/about
+
+a unix command interface looks like this
+
+command input output 
+```
+
+```{bash}
+ssh username@cypress.tulane.edu
+passsword
+
+```
+
+```         
+the ssh command allows you to log in the cypress securely 
+it requires password
+please note that password wont show for security purposes
+```
+
+```{bash}
+
+whoami
+hostname
+pwd
+ls
+cd 
+mkdir
+rm 
+rm -r
+```
+
+```         
+whoami - identifies the user
+hostname - identifies the host - where are you working
+pwd - print working directory - and shows where you are currently
+ls - list the objects in the working drectory
+```
+
+```{bash}
+
+cd ~ 
+mkdir day1
+mkdir data
+mkdir results
+
+```
+
+```         
+lets check what we have created
+we should have day1, data, and results folder in our home directory
+can we do this until here? 
+```
+
+```{bash}
+echo "sample_id, phenotype, genotype" > test.txt
+echo "sample_id2, phenotype, genotype" >> test.txt
+echo " Hi, my_name, is, Kam" >> test.txt
+head test.txt
+cat test.txt
+
+```
+
+```         
+> vs >>
+> replaces the file 
+>> appends the file you already have 
+```
+
+```{bash}
+echo "alpha" > alpha.txt
+echo "beta" > beta.txt
+echo "gamma" > gamma.txt
+ls
+```
+
+```         
+what do you see in the environment 
+how many files do you have ?
+```
+
+```{bash}
+cp test.txt test_new.txt
+ls
+cat test_new.txt
+
+cp -v test.txt test_verbose.txt
+```
+
+```         
+-v verbose is a progress bar 
+```
+
+```{bash}
+mkdir results
+cd results
+mv test_new.txt results
+ls
+ls results
+
+```
+
+```{bash}
+
+ls       #list names
+ls -l    #long listing
+ls -lh   #long listing with human-readable sizes
+ls -a    #include hidden files
+ls -lt   #newest modified files first
+ls -lS   #largest files first; capital S matters
+
+```
+
+```{bash}
+# create wild card
+*.txt    names ending in .txt
+*t       names ending in t
+t*g      names starting with t and ending with g
+T*       names starting with uppercase T
+t*       names starting with lowercase t
+
+```
+
+```{bash}
+# some basic command lines 
+cat long_file.txt
+less long_file.txt
+head long_file.txt
+tail long_file.txt
+head -n 5 long_file.txt
+tail -n 5 long_file.txt
+
+```
+
+```{bash}
+rm -i beta.txt
+
+```
